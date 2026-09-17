@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destacar nome na lista</title>
+</head>
+
+<body>
+
+    <p>Escreva um nome e veja ele destacado na lista</p>
+    <p>Se o nome não estiver na lista, ou não for exatamente igua, ele não será destacado</p>
+    <input type="text" id="buscarNome" oninput="buscar()">
+
+    <ol>
+        <li>João</li>
+        <li>Márcio</li>
+        <li>Fabiana</li>
+        <li>Jorge</li>
+        <li>Silvana</li>
+        <li>Luiz</li>
+        <li>Carlos</li>
+        <li>Pablo</li>
+    </ol>
+    <script>
+
+        var busca = document.getElementById("buscarNome");
+        var nomes = document.getElementsByTagName("li");
+
+        function buscar() {
+
+            for (var i = 0; i < 8; i++) {
+
+                if (nomes[i].innerHTML == busca.value) {
+                    nomes[i].style.color = "red";
+                } else {
+                    nomes[i].style.color = "black";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

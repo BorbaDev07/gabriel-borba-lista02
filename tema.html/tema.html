@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudar Tema</title>
+</head>
+
+<body>
+
+    <h1 id="titulo">Modo Claro/Escuro</h1>
+    <input type="button" value="Mudar Tema" onclick="mudarTema()">
+
+
+
+
+    <script>
+
+        var contador = 1;
+
+        function mudarTema() {
+
+            var titulo = document.getElementById("titulo");
+
+            contador++;
+
+            if (contador % 2 == 0) {
+                document.body.style.background = "black";
+                titulo.style.color = "white";
+            } else {
+                document.body.style.background = "white";
+                titulo.style.color = "black";
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

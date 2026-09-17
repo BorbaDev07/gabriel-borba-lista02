@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtrar</title>
+</head>
+
+<body>
+
+    <input type="text" id="buscarNome" oninput="buscar()">
+
+    <ol>
+        <li>João</li>
+        <li>Márcio</li>
+        <li>Fabiana</li>
+        <li>Jorge</li>
+        <li>Silvana</li>
+        <li>Luiz</li>
+        <li>Carlos</li>
+        <li>Pablo</li>
+    </ol>
+
+    <script>
+        
+        var busca = document.getElementById("buscarNome");
+        var nomes = document.getElementsByTagName("li");
+
+        function buscar() {
+
+            for (var i = 0; i < 8; i++) {
+
+                if (nomes[i].innerHTML.startsWith(busca.value)) {
+                    nomes[i].style.display = "block";
+                } else {
+                    nomes[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

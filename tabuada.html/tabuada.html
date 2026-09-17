@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+
+<body>
+
+    <p>Escreva um número e veja a tabuada dele</p>
+    <input type="number" id="numero">
+    <button onclick="gerarTabuada()">Gerar Tabuada</button>
+    <br>
+    <p id="resultado"></p>
+
+
+    <script>
+        function gerarTabuada() {
+
+            var numero = document.getElementById("numero").value;
+            var resultado = "tabuada do número: " + numero + "<br>";
+
+            for (var i = 0; i <= 10; i++) {
+                resultado += numero * i + "<br>";
+
+                console.log(i);
+            }
+
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

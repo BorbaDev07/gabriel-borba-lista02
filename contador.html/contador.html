@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Cliques</title>
+</head>
+
+<body>
+
+    <h1>Contador de Cliques</h1>
+
+    <input type="button" value="Clique aqui!" onclick="contagem()">
+    <input type="button" value="Zerar Contador" onclick="zerar()">
+    <p id="clicadas"></p>
+
+    <script>
+
+        var contador = 0;
+
+        function contagem() {
+
+            var resultado = document.getElementById("clicadas");
+
+            contador++;
+
+            resultado.innerHTML = "Cliques: " + contador;
+        }
+
+        function zerar() {
+
+            var resultado = document.getElementById("clicadas");
+
+            contador = 0;
+
+            resultado.innerHTML = "Cliques: " + contador;
+        }
+    </script>
+</body>
+
+</html>
